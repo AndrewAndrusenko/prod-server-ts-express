@@ -4,6 +4,8 @@ export const router = express.Router();
 
 /* GET users listing. */
 router.all('/ssngrx/*', function(req, res) { 
-  // res.send('public/index.html'); 
   res.sendFile(APPS_CONFIG.get('ssngrx')?.bootstrapPath+'index.html'); 
+});
+router.all('/rtq/*', function(req, res) { 
+  res.sendFile(APPS_CONFIG.get('rtq')?.bootstrapPath+'index.html'); 
 });

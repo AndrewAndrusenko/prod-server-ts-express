@@ -43,6 +43,7 @@ const path_1 = __importDefault(require("path"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const morgan_1 = __importDefault(require("morgan"));
 const appToServe = __importStar(require("./routes/apps-to-serve"));
+const appIndex = __importStar(require("./routes/index"));
 exports.app = (0, express_1.default)();
 // view engine setup
 exports.app.set('views', path_1.default.join(__dirname, 'views'));
@@ -53,6 +54,7 @@ exports.app.use(express_1.default.urlencoded({ extended: false }));
 exports.app.use((0, cookie_parser_1.default)());
 exports.app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
 exports.app.use('/apps', appToServe.router);
+exports.app.use('/', appIndex.router);
 // catch 404 and forward to error handler
 exports.app.use(function (req, res, next) {
     next((0, http_errors_1.default)(404));
