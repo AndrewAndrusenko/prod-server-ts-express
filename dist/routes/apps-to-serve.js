@@ -16,3 +16,7 @@ exports.router.all('/rtq/*', function (req, res) {
     var _a;
     res.sendFile(((_a = apps_configs_1.APPS_CONFIG.get('rtq')) === null || _a === void 0 ? void 0 : _a.bootstrapPath) + 'index.html');
 });
+exports.router.all('/aam/*', function (req, res) {
+    var _a;
+    res.sendFile(((_a = apps_configs_1.APPS_CONFIG.get('aam')) === null || _a === void 0 ? void 0 : _a.bootstrapPath) + 'index.html');
+});

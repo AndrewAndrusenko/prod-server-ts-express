@@ -9,3 +9,6 @@ router.all('/ssngrx/*', function(req, res) {
 router.all('/rtq/*', function(req, res) { 
   res.sendFile(APPS_CONFIG.get('rtq')?.bootstrapPath+'index.html'); 
 });
+router.all('/aam/*', function(req, res) { 
+  res.sendFile(APPS_CONFIG.get('aam')?.bootstrapPath+'index.html'); 
+});
