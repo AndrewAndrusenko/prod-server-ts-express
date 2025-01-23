@@ -53,6 +53,7 @@ exports.app.use(express_1.default.json());
 exports.app.use(express_1.default.urlencoded({ extended: false }));
 exports.app.use((0, cookie_parser_1.default)());
 exports.app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
+exports.app.use('/favicon.ico', express_1.default.static('images/favicon.ico'));
 exports.app.use('/apps', appToServe.router);
 exports.app.use('/', appIndex.router);
 // catch 404 and forward to error handler
